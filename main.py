@@ -1,5 +1,5 @@
 from hotel.app.common.utils_rooms import generate_rooms, get_all_rooms
-from hotel.app.hotel.hotel import MultipleLevels, MultipleRows, TiptonHotel
+from hotel.app.adapters.hotel import MultipleLevels, MultipleRows, TiptonHotel
 from hotel.infra.terminal.terminal import lodge_procces
 
 individual_rooms, double_rooms, large_rooms = generate_rooms()
