@@ -15,7 +15,8 @@ class LodgeRoomService:
         room = self.repository.get_unoccupied_room(self.level_id)
 
         if not self.guest.number_guest <= room.guest_allowed:
-            raise SurplusGuestsException('The room is very small for the number of guests')
+            raise SurplusGuestsException("The room is very smallfor the number of guests. "+
+                                        "We can not give you this room. Only Double Rooms and Large Rooms")
         self.repository.lodge(
             room=room,
             guest=self.guest
